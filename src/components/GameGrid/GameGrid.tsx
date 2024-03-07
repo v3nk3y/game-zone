@@ -6,7 +6,7 @@ import GameCardContainer from "../GameCardContainer/GameCardContainer";
 
 const GameGrid = () => {
   const { data, error, isLoading } = useGames();
-  const gameCardSkeletons = [1, 2, 3, 4, 5, 6];
+  const gameCardSkeletons = [1, 2, 3, 4, 5, 6, 7, 8];
   return (
     <>
       {error && <Text color="red">{error}</Text>}
