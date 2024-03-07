@@ -13,6 +13,7 @@ export interface Game {
   // Thats how it was deifined on the endpoint
   parent_platforms: { platform: Platform }[];
   metacritic: number;
+  rating_top: number;
 }
 
 const useGames = (gameQuery: GameQuery | null) =>
