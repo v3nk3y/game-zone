@@ -9,13 +9,10 @@ export interface Genre {
   image_background: string;
 }
 
-// Getting data from the API call
-// const useGenres = () => useData<Genre>("/genres");
-
 // Getting data from the local data object
-// const useGenres = () => ({ data: null, isLoading: false, error: null });
+// const useGenres = () => ({ data: genres, isLoading: false, error: null });
 
-// Getting data using React Query lib
+// Use React Query for fetching data
 const useGenres = () =>
   useQuery({
     queryKey: ["genres"],

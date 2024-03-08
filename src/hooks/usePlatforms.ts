@@ -9,7 +9,6 @@ export interface Platform {
   name: string;
   slug: string;
 }
-// const usePlatforms = () => useData<Platform>("/platforms/lists/parents");
 
 // Use React Query for fetching data
 const usePlatforms = () =>

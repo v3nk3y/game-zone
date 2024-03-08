@@ -9,28 +9,13 @@ export interface Game {
   id: number;
   name: string;
   background_image: string;
-  // Thats how it was deifined on the endpoint
+  // Thats how it was defined on the endpoint
   parent_platforms: { platform: Platform }[];
   metacritic: number;
   rating_top: number;
 }
 
-// const useGames = (gameQuery: GameQuery | null) =>
-//   useData<Game>(
-//     "/games",
-//     {
-//       params: {
-//         genres: gameQuery?.genre?.id,
-//         platforms: gameQuery?.platform?.id,
-//         ordering: gameQuery?.sortOrder,
-//         search: gameQuery?.searchText,
-//       },
-//     },
-//     [gameQuery]
-//   );
-
-// Using React Query instead to fetch data
-
+// Use React Query for fetching data
 const useGames = (gameQuery: GameQuery) =>
   useQuery<FetchResponse<Game>, Error>({
     queryKey: ["games", gameQuery],
