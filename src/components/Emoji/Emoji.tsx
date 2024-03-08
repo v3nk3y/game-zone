@@ -5,13 +5,14 @@ interface Props {
 }
 
 const Emoji = ({ rating }: Props) => {
-  if (rating < 4) return null;
+  if (rating < 3) return null;
 
   const emojiMap: { [key: number]: string } = {
-    4: "🔥",
-    5: "🔥🔥",
+    3: "⭐️",
+    4: "⭐️⭐️",
+    5: "⭐️⭐️⭐️",
   };
-  return <Box>{emojiMap[rating]}</Box>;
+  return <Box whiteSpace="nowrap">{emojiMap[rating]}</Box>;
 };
 
 export default Emoji;
