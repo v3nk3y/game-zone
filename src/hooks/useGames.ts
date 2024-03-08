@@ -29,6 +29,7 @@ const useGames = (gameQuery: GameQuery) =>
           page: pageParam,
         },
       }),
+    staleTime: 24 * 60 * 60 * 10000, // 24hrs
     getNextPageParam: (lastPage, allPages) => {
       return lastPage.next ? allPages.length + 1 : undefined;
     },
