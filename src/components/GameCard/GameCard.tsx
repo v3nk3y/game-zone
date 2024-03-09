@@ -7,7 +7,7 @@ import {
   Link as ChakraLink,
 } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
-import { Game } from "../../hooks/useGames";
+import { Game } from "../../entities/Game";
 import PlatformIconList from "../PlatformIconList/PlatformIconList";
 import CriticScore from "../CriticScore/CriticScore";
 import getCroppedImage from "../../services/image-url";
