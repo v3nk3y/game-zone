@@ -1,17 +1,17 @@
 import {
   Card,
   CardBody,
+  Link as ChakraLink,
   HStack,
   Heading,
   Image,
-  Link as ChakraLink,
 } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
-import { Game } from "../../entities/Game";
-import PlatformIconList from "../PlatformIconList/PlatformIconList";
-import CriticScore from "../CriticScore/CriticScore";
+import Game from "../../entities/Game";
 import getCroppedImage from "../../services/image-url";
+import CriticScore from "../CriticScore/CriticScore";
 import Emoji from "../Emoji/Emoji";
+import PlatformIconList from "../PlatformIconList/PlatformIconList";
 
 interface Props {
   game: Game;
