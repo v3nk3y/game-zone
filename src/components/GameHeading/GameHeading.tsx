@@ -7,7 +7,7 @@ const GameHeading = () => {
   const genre = useGenre(genreId);
   const heading = `${genre?.name || ""} Games`;
   return (
-    <Heading as="h1" marginY={5} fontSize="5xl">
+    <Heading as="h1" marginY={2} fontSize="5xl">
       {heading}
     </Heading>
   );
