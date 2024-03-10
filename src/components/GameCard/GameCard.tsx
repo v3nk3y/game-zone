@@ -1,4 +1,5 @@
 import {
+  AspectRatio,
   Card,
   CardBody,
   Link as ChakraLink,
@@ -19,17 +20,28 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <ChakraLink as={ReactRouterLink} to={"/games/" + game.slug}>
+    <ChakraLink
+      as={ReactRouterLink}
+      to={"/games/" + game.slug}
+      _hover={{ textDecoration: "none" }}
+    >
       <Card>
-        <Image src={getCroppedImage(game.background_image)}></Image>
-        <CardBody>
+        <AspectRatio ratio={4 / 3}>
+          <Image
+            src={getCroppedImage(game.background_image)}
+            objectFit="cover"
+          ></Image>
+        </AspectRatio>
+        <CardBody padding={4}>
           <HStack justifyContent="space-between" marginBottom={2}>
             <PlatformIconList
               platforms={game.parent_platforms.map((p) => p.platform)}
             />
             <CriticScore score={game.metacritic} />
           </HStack>
-          <Heading fontSize="2xl">{game.name}</Heading>
+          <Heading fontSize="large" marginBottom={1}>
+            {game.name}
+          </Heading>
           <Emoji rating={game.rating_top} />
         </CardBody>
       </Card>

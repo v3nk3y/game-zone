@@ -18,7 +18,7 @@ const SearchInput = () => {
         }
       }}
     >
-      <InputGroup>
+      <InputGroup minWidth="150px">
         <InputLeftElement children={<BsSearch />} />
         <Input
           ref={ref}
